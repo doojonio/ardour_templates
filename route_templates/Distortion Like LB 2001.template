@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Route version="6000" id="167" name="Distortion Like LB 2001" default-type="audio" strict-io="1" active="1" denormal-protection="0" meter-point="MeterInput" disk-io-point="DiskIOPreFader" meter-type="MeterPeak" audio-playlist="212" saved-meter-point="MeterPostFader" alignment-choice="Automatic" mode="Normal">
+  <ProgramVersion created-with="Ardour 6.9" modified-with="Ardour 6.9" name="Distortion Like LB 2001"/>
+  <PresentationInfo order="1" flags="AudioTrack,OrderSet" color="2126964223"/>
+  <Controllable name="solo" id="175" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
+  <Controllable name="solo-iso" id="181" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
+  <Controllable name="solo-safe" id="183" flags="Toggle" value="0" solo-safe="0"/>
+  <IO name="Audio 1" id="195" direction="Input" default-type="audio">
+    <Port type="audio" name="Audio 1/audio_in 1">
+      <Connection other="system:capture_2"/>
+    </Port>
+  </IO>
+  <IO name="Audio 1" id="196" direction="Output" default-type="audio">
+    <Port type="audio" name="Audio 1/audio_out 1">
+      <Connection other="Master/audio_in 1"/>
+    </Port>
+    <Port type="audio" name="Audio 1/audio_out 2">
+      <Connection other="Master/audio_in 2"/>
+    </Port>
+  </IO>
+  <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
+  <Controllable name="mute" id="177" flags="Toggle,RealTime" value="0"/>
+  <Controllable name="phase" id="179" flags="Toggle" value="0" phase-invert="0"/>
+  <Automation>
+    <AutomationList automation-id="solo" id="174" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="solo-iso" id="180" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="solo-safe" id="182" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="mute" id="176" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="rec-enable" id="206" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="rec-safe" id="208" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="phase" id="178" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="monitor" id="210" interpolation-style="Discrete" state="Off"/>
+  </Automation>
+  <Pannable>
+    <Controllable name="pan-azimuth" id="186" flags="" value="0.5"/>
+    <Controllable name="pan-width" id="190" flags="" value="0"/>
+    <Controllable name="pan-elevation" id="188" flags="" value="0"/>
+    <Controllable name="pan-frontback" id="192" flags="" value="0"/>
+    <Controllable name="pan-lfe" id="194" flags="" value="0"/>
+    <Automation>
+      <AutomationList automation-id="pan-azimuth" id="185" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="pan-elevation" id="187" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="pan-width" id="189" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="pan-frontback" id="191" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="pan-lfe" id="193" interpolation-style="Linear" state="Off"/>
+    </Automation>
+  </Pannable>
+  <Processor id="201" name="meter-Audio 1" active="1" user-latency="0" use-user-latency="0" type="meter"/>
+  <Processor id="205" name="recorder:Audio 1" active="1" user-latency="0" use-user-latency="0" type="diskwriter" record-safe="0"/>
+  <Processor id="204" name="player:Audio 1" active="1" user-latency="0" use-user-latency="0" type="diskreader"/>
+  <Processor id="198" name="Polarity" active="1" user-latency="0" use-user-latency="0" type="polarity"/>
+  <Processor id="200" name="Amp" active="1" user-latency="0" use-user-latency="0" type="trim">
+    <Automation>
+      <AutomationList automation-id="trim" id="172" interpolation-style="Logarithmic" state="Off"/>
+    </Automation>
+    <Controllable name="trimcontrol" id="173" flags="GainLike" value="1"/>
+  </Processor>
+  <Processor id="226" name="GxTubeScreamer" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="http://guitarix.sourceforge.net/plugins/gxts9#ts9sim" count="1" custom="0">
+    <Automation>
+      <AutomationList automation-id="parameter-0" id="227" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-1" id="229" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-2" id="231" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-5" id="233" interpolation-style="Discrete" state="Off"/>
+    </Automation>
+    <ConfiguredInput>
+      <Channels type="audio" count="1"/>
+    </ConfiguredInput>
+    <CustomSinks>
+      <Channels type="audio" count="1"/>
+    </CustomSinks>
+    <ConfiguredOutput>
+      <Channels type="audio" count="1"/>
+    </ConfiguredOutput>
+    <PresetOutput/>
+    <InputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </InputMap-0>
+    <OutputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </OutputMap-0>
+    <ThruMap/>
+    <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1" template-dir="/home/anton/.config/ardour6/route_templates/Distortion Like LB 2001">
+      <Port symbol="fslider0_" value="-9.3704214096069336"/>
+      <Port symbol="fslider1_" value="1000"/>
+      <Port symbol="fslider2_" value="1"/>
+      <Port symbol="BYPASS" value="1"/>
+    </lv2>
+    <Controllable name="Level" id="228" flags="" value="-9.3704214096069336" parameter="0" symbol="fslider0_"/>
+    <Controllable name="Tone" id="230" flags="" value="1000" parameter="1" symbol="fslider1_"/>
+    <Controllable name="Drive" id="232" flags="" value="1" parameter="2" symbol="fslider2_"/>
+    <Controllable name="BYPASS" id="234" flags="Toggle" value="1" parameter="5" symbol="BYPASS"/>
+  </Processor>
+  <Processor id="239" name="GxAmplifier-X" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="http://guitarix.sourceforge.net/plugins/gx_amp#GUITARIX" count="1" custom="0">
+    <Automation>
+      <AutomationList automation-id="parameter-0" id="240" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-1" id="242" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-2" id="244" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-3" id="246" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-4" id="248" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-5" id="250" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-6" id="252" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-7" id="254" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-8" id="256" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-9" id="258" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-10" id="260" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-11" id="262" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-17" id="264" interpolation-style="Discrete" state="Off"/>
+    </Automation>
+    <ConfiguredInput>
+      <Channels type="audio" count="1"/>
+    </ConfiguredInput>
+    <CustomSinks>
+      <Channels type="audio" count="1"/>
+    </CustomSinks>
+    <ConfiguredOutput>
+      <Channels type="audio" count="1"/>
+    </ConfiguredOutput>
+    <PresetOutput/>
+    <InputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </InputMap-0>
+    <OutputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </OutputMap-0>
+    <ThruMap/>
+    <lv2 last-preset-uri="file:///home/anton/.lv2/GxAmplifier-X_Like_LB_in_2001.lv2/Like_LB_in_2001.ttl" last-preset-label="Like LB in 2001" parameter-changed-since-last-preset="0" template-dir="/home/anton/.config/ardour6/route_templates/Distortion Like LB 2001">
+      <Port symbol="MasterGain" value="17.100000381469727"/>
+      <Port symbol="PreGain" value="0"/>
+      <Port symbol="Distortion" value="1"/>
+      <Port symbol="Drive" value="0.0099999997764825821"/>
+      <Port symbol="Middle" value="0.34999999403953552"/>
+      <Port symbol="Bass" value="1"/>
+      <Port symbol="Treble" value="1"/>
+      <Port symbol="Cabinet" value="20"/>
+      <Port symbol="Presence" value="10"/>
+      <Port symbol="model" value="7"/>
+      <Port symbol="t_model" value="13"/>
+      <Port symbol="c_model" value="17"/>
+      <Port symbol="BYPASS" value="1"/>
+    </lv2>
+    <Controllable name="MasterGain" id="241" flags="" value="17.100000381469727" parameter="0" symbol="MasterGain"/>
+    <Controllable name="PreGain" id="243" flags="" value="0" parameter="1" symbol="PreGain"/>
+    <Controllable name="Distortion" id="245" flags="" value="1" parameter="2" symbol="Distortion"/>
+    <Controllable name="Drive" id="247" flags="" value="0.0099999997764825821" parameter="3" symbol="Drive"/>
+    <Controllable name="Middle" id="249" flags="" value="0.34999999403953552" parameter="4" symbol="Middle"/>
+    <Controllable name="Bass" id="251" flags="" value="1" parameter="5" symbol="Bass"/>
+    <Controllable name="Treble" id="253" flags="" value="1" parameter="6" symbol="Treble"/>
+    <Controllable name="Cabinet" id="255" flags="" value="20" parameter="7" symbol="Cabinet"/>
+    <Controllable name="Presence" id="257" flags="" value="10" parameter="8" symbol="Presence"/>
+    <Controllable name="Model" id="259" flags="" value="7" parameter="9" symbol="model"/>
+    <Controllable name="Tonestack Model" id="261" flags="" value="13" parameter="10" symbol="t_model"/>
+    <Controllable name="Cab Model" id="263" flags="" value="17" parameter="11" symbol="c_model"/>
+    <Controllable name="BYPASS" id="265" flags="Toggle" value="1" parameter="17" symbol="BYPASS"/>
+  </Processor>
+  <Processor id="293" name="ACE EQ" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="urn:ardour:a-eq" count="1" custom="0">
+    <Automation>
+      <AutomationList automation-id="parameter-0" id="294" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-1" id="296" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-2" id="298" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-3" id="300" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-4" id="302" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-5" id="304" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-6" id="306" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-7" id="308" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-8" id="310" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-9" id="312" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-10" id="314" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-11" id="316" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-12" id="318" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-13" id="320" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-14" id="322" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-15" id="324" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-16" id="326" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-17" id="328" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-18" id="330" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-19" id="332" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-20" id="334" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-21" id="336" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-22" id="338" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-23" id="340" interpolation-style="Discrete" state="Off"/>
+    </Automation>
+    <ConfiguredInput>
+      <Channels type="audio" count="1"/>
+    </ConfiguredInput>
+    <CustomSinks>
+      <Channels type="audio" count="1"/>
+    </CustomSinks>
+    <ConfiguredOutput>
+      <Channels type="audio" count="1"/>
+    </ConfiguredOutput>
+    <PresetOutput/>
+    <InputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </InputMap-0>
+    <OutputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </OutputMap-0>
+    <ThruMap/>
+    <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1" template-dir="/home/anton/.config/ardour6/route_templates/Distortion Like LB 2001">
+      <Port symbol="freql" value="49.308387756347656"/>
+      <Port symbol="gl" value="15.232044219970703"/>
+      <Port symbol="freq1" value="300"/>
+      <Port symbol="g1" value="0"/>
+      <Port symbol="bw1" value="1"/>
+      <Port symbol="freq2" value="1000"/>
+      <Port symbol="g2" value="0"/>
+      <Port symbol="bw2" value="1"/>
+      <Port symbol="freq3" value="2500"/>
+      <Port symbol="g3" value="0"/>
+      <Port symbol="bw3" value="1"/>
+      <Port symbol="freq4" value="6000"/>
+      <Port symbol="g4" value="0"/>
+      <Port symbol="bw4" value="1"/>
+      <Port symbol="freqh" value="10890.365234375"/>
+      <Port symbol="gh" value="15.744049072265625"/>
+      <Port symbol="master" value="0"/>
+      <Port symbol="filtogl" value="1"/>
+      <Port symbol="filtog1" value="1"/>
+      <Port symbol="filtog2" value="1"/>
+      <Port symbol="filtog3" value="1"/>
+      <Port symbol="filtog4" value="1"/>
+      <Port symbol="filtogh" value="1"/>
+      <Port symbol="enable" value="1"/>
+    </lv2>
+    <Controllable name="Frequency L" id="295" flags="" value="49.308387756347656" parameter="0" symbol="freql"/>
+    <Controllable name="Gain L" id="297" flags="" value="15.232044219970703" parameter="1" symbol="gl"/>
+    <Controllable name="Frequency 1" id="299" flags="" value="300" parameter="2" symbol="freq1"/>
+    <Controllable name="Gain 1" id="301" flags="" value="0" parameter="3" symbol="g1"/>
+    <Controllable name="Bandwidth 1" id="303" flags="" value="1" parameter="4" symbol="bw1"/>
+    <Controllable name="Frequency 2" id="305" flags="" value="1000" parameter="5" symbol="freq2"/>
+    <Controllable name="Gain 2" id="307" flags="" value="0" parameter="6" symbol="g2"/>
+    <Controllable name="Bandwidth 2" id="309" flags="" value="1" parameter="7" symbol="bw2"/>
+    <Controllable name="Frequency 3" id="311" flags="" value="2500" parameter="8" symbol="freq3"/>
+    <Controllable name="Gain 3" id="313" flags="" value="0" parameter="9" symbol="g3"/>
+    <Controllable name="Bandwidth 3" id="315" flags="" value="1" parameter="10" symbol="bw3"/>
+    <Controllable name="Frequency 4" id="317" flags="" value="6000" parameter="11" symbol="freq4"/>
+    <Controllable name="Gain 4" id="319" flags="" value="0" parameter="12" symbol="g4"/>
+    <Controllable name="Bandwidth 4" id="321" flags="" value="1" parameter="13" symbol="bw4"/>
+    <Controllable name="Frequency H" id="323" flags="" value="10890.365234375" parameter="14" symbol="freqh"/>
+    <Controllable name="Gain H" id="325" flags="" value="15.744049072265625" parameter="15" symbol="gh"/>
+    <Controllable name="Master Gain" id="327" flags="" value="0" parameter="16" symbol="master"/>
+    <Controllable name="Filter L" id="329" flags="Toggle" value="1" parameter="17" symbol="filtogl"/>
+    <Controllable name="Filter 1" id="331" flags="Toggle" value="1" parameter="18" symbol="filtog1"/>
+    <Controllable name="Filter 2" id="333" flags="Toggle" value="1" parameter="19" symbol="filtog2"/>
+    <Controllable name="Filter 3" id="335" flags="Toggle" value="1" parameter="20" symbol="filtog3"/>
+    <Controllable name="Filter 4" id="337" flags="Toggle" value="1" parameter="21" symbol="filtog4"/>
+    <Controllable name="Filter H" id="339" flags="Toggle" value="1" parameter="22" symbol="filtogh"/>
+    <Controllable name="Enable" id="341" flags="Toggle" value="1" parameter="23" symbol="enable"/>
+  </Processor>
+  <Processor id="270" name="ACE Compressor" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="urn:ardour:a-comp" count="1" custom="0">
+    <Automation>
+      <AutomationList automation-id="parameter-0" id="271" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-1" id="273" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-2" id="275" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-3" id="277" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-4" id="279" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-5" id="281" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-9" id="283" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-10" id="285" interpolation-style="Discrete" state="Off"/>
+    </Automation>
+    <ConfiguredInput>
+      <Channels type="audio" count="1"/>
+    </ConfiguredInput>
+    <CustomSinks>
+      <Channels type="audio" count="2"/>
+    </CustomSinks>
+    <ConfiguredOutput>
+      <Channels type="audio" count="1"/>
+    </ConfiguredOutput>
+    <PresetOutput/>
+    <InputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+      <Channelmap type="audio" from="1" to="1"/>
+    </InputMap-0>
+    <OutputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </OutputMap-0>
+    <ThruMap/>
+    <Processor id="287" name="SC Audio 1/ACE Compressor 1" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="1" type="sidechain">
+      <IO name="SC Audio 1/ACE Compressor 1" id="288" direction="Input" default-type="audio" pretty-name="SC ACE Compressor">
+        <Port type="audio" name="SC Audio 1/ACE Compressor 1/audio_in 1"/>
+      </IO>
+    </Processor>
+    <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1" template-dir="/home/anton/.config/ardour6/route_templates/Distortion Like LB 2001">
+      <Port symbol="att" value="10"/>
+      <Port symbol="rel" value="80"/>
+      <Port symbol="kn" value="4.4159998893737793"/>
+      <Port symbol="rat" value="6.8179187774658203"/>
+      <Port symbol="thr" value="-31.499904632568359"/>
+      <Port symbol="mak" value="4.9500002861022949"/>
+      <Port symbol="sidech" value="0"/>
+      <Port symbol="enable" value="1"/>
+    </lv2>
+    <Controllable name="Attack" id="272" flags="" value="10" parameter="0" symbol="att"/>
+    <Controllable name="Release" id="274" flags="" value="80" parameter="1" symbol="rel"/>
+    <Controllable name="Knee" id="276" flags="" value="4.4159998893737793" parameter="2" symbol="kn"/>
+    <Controllable name="Ratio" id="278" flags="" value="6.8179187774658203" parameter="3" symbol="rat"/>
+    <Controllable name="Threshold" id="280" flags="" value="-31.499904632568359" parameter="4" symbol="thr"/>
+    <Controllable name="Makeup" id="282" flags="" value="4.9500002861022949" parameter="5" symbol="mak"/>
+    <Controllable name="Sidechain" id="284" flags="Toggle" value="0" parameter="9" symbol="sidech"/>
+    <Controllable name="Enable" id="286" flags="Toggle" value="1" parameter="10" symbol="enable"/>
+  </Processor>
+  <Processor id="197" name="Amp" active="1" user-latency="0" use-user-latency="0" type="amp">
+    <Automation>
+      <AutomationList automation-id="gain" id="170" interpolation-style="Exponential" state="Off"/>
+    </Automation>
+    <Controllable name="gaincontrol" id="171" flags="GainLike" value="1"/>
+  </Processor>
+  <Processor id="202" name="Audio 1" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="0" output="Audio 1" type="main-outs" role="Main">
+    <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
+  </Processor>
+  <Slavable/>
+  <Controllable name="monitor" id="211" flags="RealTime" value="0" monitoring=""/>
+  <Controllable name="rec-safe" id="209" flags="Toggle,RealTime" value="0"/>
+  <Controllable name="rec-enable" id="207" flags="Toggle,RealTime" value="1"/>
+</Route>
